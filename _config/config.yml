@@ -1,0 +1,5 @@
+---
+Name: dropdown2autoselect
+Before: 'mysite/*'
+After: 'framework/*','cms/*'
+---
