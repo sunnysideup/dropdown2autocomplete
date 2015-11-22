@@ -1,7 +1,7 @@
 <?php
 
 
-class Dropdown2Autoselect extends DropdownField {
+class Dropdown2Autocomplete extends DropdownField {
 
 	function Field() {
 		Requirements::css("dropdown2autoselect/javascript/chosen/chose.min.css");
