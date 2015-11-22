@@ -7,7 +7,9 @@
 
 Create a field:
 
-new DropdownToAutoselect(....)
+```php 
+    $field DropdownToAutocomplete::create(....)
+```
 
 just as if you were to create a dropdown field.
 
