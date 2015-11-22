@@ -36,12 +36,29 @@ class Dropdown2AutocompleteField extends DropdownField {
 	 * @return string
 	 */ 
 	function Field($parameters = array()) {
-		$field = parent::Field($parameters);
 		if($this->autocomplete) {
-			Requirements::css("dropdown2autodropdown/javascript/chosen/chose.min.css");
+			$this->addExtraClass("chosenAutocompleteField");
+			$field = parent::Field($parameters);
+			Requirements::css("dropdown2autocomplete/javascript/chosen/chosen.min.css");
 			Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
-			Requirements::javascript("dropdown2autodropdown/javascript/chosen/chosen.jquery.min.js");
-			Requirements::customScript('jQuery("#'.$this->ID().'").chosen();', $this->ID()."_chosen_setup");
+			Requirements::javascript("dropdown2autocomplete/javascript/chosen/chosen.jquery.min.js");
+			
+			Requirements::customScript('
+					jQuery("#'.$this->ID().'").chosen('.$this->Config()->get("js_settings").');
+					jQuery("body").on(
+						"focus",
+						".chosenAutocompleteField",
+						function(){
+							console.log("doing it");
+							jQuery(this).chosen('.$this->Config()->get("js_settings").');
+						}
+					);
+				',
+				$this->ID()."_chosen_setup"
+			);
+		}
+		else {
+			$field = parent::Field($parameters);
 		}
 		return $field;
 		

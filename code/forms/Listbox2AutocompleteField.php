@@ -39,10 +39,25 @@ class Listbox2AutocompleteField extends ListboxField {
 	function Field($parameters = array()) {
 		$field = parent::Field($parameters);
 		if($this->autocomplete) {
-			Requirements::css("dropdown2autodropdown/javascript/chosen/chosen.min.css");
+			Requirements::css("dropdown2autocomplete/javascript/chosen/chosen.min.css");
 			Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
-			Requirements::javascript("dropdown2autodropdown/javascript/chosen/chosen.jquery.min.js");
-			Requirements::customScript('jQuery("#'.$this->ID().'").chosen();', $this->ID()."_chosen_setup");
+			Requirements::javascript("dropdown2autocomplete/javascript/chosen/chosen.jquery.min.js");
+			$this->addClass("Listbox2AutocompleteField");
+			Requirements::customScript('
+				jQuery("#'.$this->ID().'").chosen('.$this->Config()->get("js_settings").');
+				jQuery("body").on(
+					"focus",
+					".Listbox2AutocompleteField",
+					function(){
+						jQuery(el).chosen('.$this->Config()->get("js_settings").');
+					}
+				);
+				
+
+				',
+				$this->ID()."_chosen_setup"
+			);
+			
 		}
 		return $field;
 		

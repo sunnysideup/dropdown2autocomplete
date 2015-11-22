@@ -4,5 +4,11 @@ Before: 'mysite/*'
 After: 'framework/*','cms/*'
 ---
 
-A:
- b: 1
+Dropdown2AutocompleteField:
+ js_settings: '{search_contains: true, allow_single_deselect: true}'
+ 
+GroupedDropdown2AutocompleteField:
+ js_settings: '{search_contains: true, allow_single_deselect: true}'
+
+GroupedDropdown2AutocompleteField:
+ js_settings: '{search_contains: true, allow_single_deselect: true}'
