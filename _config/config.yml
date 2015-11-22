@@ -1,5 +1,5 @@
 ---
-Name: dropdown2autoselect
+Name: dropdown2autocomplete
 Before: 'mysite/*'
 After: 'framework/*','cms/*'
 ---
