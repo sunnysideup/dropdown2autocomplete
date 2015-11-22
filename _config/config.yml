@@ -3,3 +3,6 @@ Name: dropdown2autocomplete
 Before: 'mysite/*'
 After: 'framework/*','cms/*'
 ---
+
+A:
+ b: 1
