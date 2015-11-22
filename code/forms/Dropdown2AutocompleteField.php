@@ -49,7 +49,6 @@ class Dropdown2AutocompleteField extends DropdownField {
 						"focus",
 						".chosenAutocompleteField",
 						function(){
-							console.log("doing it");
 							jQuery(this).chosen('.$this->Config()->get("js_settings").');
 						}
 					);
