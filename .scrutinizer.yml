@@ -1,9 +1,9 @@
 inherit: true
-
-checks:
-  php:
-    code_rating: true
-    duplication: true
-
 filter:
-  paths: [code/*, tests/*]
+filter:
+  paths: ["code/*", "tests/*"]
+  excluded_paths:
+    - thirdparty/*
+    - parsers/*
+    - docs/*
+    - images/*
