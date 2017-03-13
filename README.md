@@ -15,7 +15,7 @@
 
  * [Developer Docs](docs/en/INDEX.md)
  * [User Guide](docs/en/userguide.md)
- * [API](http://ssmods.com/apis/dropdown2autocomplete/docs/en/api/)
+ * [API Docs](http://docs.ssmods.com/sunnysideup/dropdown2autocomplete)
 
 ## Requirements
 
