@@ -48,7 +48,8 @@ class Listbox2AutocompleteField extends ListboxField
             Requirements::css("dropdown2autocomplete/javascript/chosen/chosen.min.css");
             Requirements::javascript(THIRDPARTY_DIR . '/jquery/jquery.js');
             Requirements::javascript("dropdown2autocomplete/javascript/chosen/chosen.jquery.min.js");
-            Requirements::customScript('
+            Requirements::customScript(
+                '
 					jQuery("#'.$this->ID().'").chosen('.$this->Config()->get("js_settings").');
 					jQuery("body").on(
 						"focus",
