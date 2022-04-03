@@ -1,5 +1,5 @@
 {
-    "type": "silverstripe-module",
+    "type": "silverstripe-vendormodule",
     "name": "sunnysideup/dropdown2autocomplete",
     "description": "Turn a Dropdown Field into an Autocomplete Field",
     "keywords": [
