@@ -1,0 +1,4 @@
+mappings:
+  GroupedDropdown2AutocompleteField: Sunnysideup\Dropdown2Autocomplete\Forms\GroupedDropdown2AutocompleteField
+  Listbox2AutocompleteField: Sunnysideup\Dropdown2Autocomplete\Forms\Listbox2AutocompleteField
+  Dropdown2AutocompleteField: Sunnysideup\Dropdown2Autocomplete\Forms\Dropdown2AutocompleteField

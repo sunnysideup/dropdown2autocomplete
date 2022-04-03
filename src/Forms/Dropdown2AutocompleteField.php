@@ -1,5 +1,11 @@
 <?php
 
+namespace Sunnysideup\Dropdown2Autocomplete\Forms;
+
+use DropdownField;
+use Requirements;
+
+
 /**
  * just like a Dropdown Field but now with an autocomplete
  * system baked into it.
