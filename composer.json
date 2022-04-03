@@ -24,7 +24,5 @@
     "require": {
         "silverstripe/recipe-cms": "*"
     },
-    "extra": {
-        "installer-name": "dropdown2autocomplete"
-    }
+    "extra": []
 }
