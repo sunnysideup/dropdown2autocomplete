@@ -21,7 +21,9 @@
             "role": "lead developer"
         }
     ],
-    "require": [],
+    "require": {
+        "silverstripe/recipe-cms": "^4.4"
+    },
     "extra": {
         "installer-name": "dropdown2autocomplete"
     }
