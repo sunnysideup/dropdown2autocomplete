@@ -45,7 +45,7 @@ class Listbox2AutocompleteField extends ListboxField
         if ($this->autocomplete) {
             $this->addExtraClass("chosenAutocompleteField");
             $field = parent::Field($parameters);
-            Requirements::css("dropdown2autocomplete/javascript/chosen/chosen.min.css");
+            Requirements::css("sunnysideup/dropdown2autocomplete: dropdown2autocomplete/javascript/chosen/chosen.min.css");
 
 /**
   * ### @@@@ START REPLACEMENT @@@@ ###
@@ -55,8 +55,8 @@ class Listbox2AutocompleteField extends ListboxField
   * EXP: Check for best usage and inclusion of Jquery
   * ### @@@@ STOP REPLACEMENT @@@@ ###
   */
-            Requirements::javascript('silverstripe/admin: thirdparty/jquery/jquery.js');
-            Requirements::javascript("dropdown2autocomplete/javascript/chosen/chosen.jquery.min.js");
+            Requirements::javascript('sunnysideup/dropdown2autocomplete: silverstripe/admin: thirdparty/jquery/jquery.js');
+            Requirements::javascript("sunnysideup/dropdown2autocomplete: dropdown2autocomplete/javascript/chosen/chosen.jquery.min.js");
             Requirements::customScript(
                 '
 					jQuery("#'.$this->ID().'").chosen('.$this->Config()->get("js_settings").');
