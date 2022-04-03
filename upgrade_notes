@@ -1,0 +1,97 @@
+2022-04-03 03:07
+
+# running php upgrade upgrade see: https://github.com/silverstripe/silverstripe-upgrader
+cd /var/www/upgrades/dropdown2autocomplete
+php /var/www/ss3/upgrader/vendor/silverstripe/upgrader/bin/upgrade-code upgrade /var/www/upgrades/dropdown2autocomplete/dropdown2autocomplete  --root-dir=/var/www/upgrades/dropdown2autocomplete --write -vvv
+Writing changes for 5 files
+Running upgrades on "/var/www/upgrades/dropdown2autocomplete/dropdown2autocomplete"
+[2022-04-03 15:07:44] Applying RenameClasses to Dropdown2autocompleteTest.php...
+[2022-04-03 15:07:44] Applying ClassToTraitRule to Dropdown2autocompleteTest.php...
+[2022-04-03 15:07:44] Applying UpdateConfigClasses to config.yml...
+[2022-04-03 15:07:44] Applying RenameClasses to GroupedDropdown2AutocompleteField.php...
+[2022-04-03 15:07:44] Applying ClassToTraitRule to GroupedDropdown2AutocompleteField.php...
+[2022-04-03 15:07:44] Applying RenameClasses to Listbox2AutocompleteField.php...
+[2022-04-03 15:07:44] Applying ClassToTraitRule to Listbox2AutocompleteField.php...
+[2022-04-03 15:07:44] Applying RenameClasses to Dropdown2AutocompleteField.php...
+[2022-04-03 15:07:44] Applying ClassToTraitRule to Dropdown2AutocompleteField.php...
+[2022-04-03 15:07:44] Applying RenameClasses to _config.php...
+[2022-04-03 15:07:44] Applying ClassToTraitRule to _config.php...
+modified:	tests/Dropdown2autocompleteTest.php
+@@ -1,4 +1,6 @@
+ <?php
++
++use SilverStripe\Dev\SapphireTest;
+
+ class Dropdown2autocompleteTest extends SapphireTest
+ {
+
+modified:	_config/config.yml
+@@ -3,13 +3,8 @@
+ Before: 'app/*'
+ After: 'framework/*','cms/*'
+ ---
++Sunnysideup\Dropdown2Autocomplete\Forms\Dropdown2AutocompleteField:
++  js_settings: '{search_contains: true, allow_single_deselect: true}'
++Sunnysideup\Dropdown2Autocomplete\Forms\GroupedDropdown2AutocompleteField:
++  js_settings: '{search_contains: true, allow_single_deselect: true}'
+
+-Dropdown2AutocompleteField:
+- js_settings: '{search_contains: true, allow_single_deselect: true}'
+-
+-GroupedDropdown2AutocompleteField:
+- js_settings: '{search_contains: true, allow_single_deselect: true}'
+-
+-GroupedDropdown2AutocompleteField:
+- js_settings: '{search_contains: true, allow_single_deselect: true}'
+-
+
+modified:	src/Forms/GroupedDropdown2AutocompleteField.php
+@@ -2,8 +2,11 @@
+
+ namespace Sunnysideup\Dropdown2Autocomplete\Forms;
+
+-use DropdownField;
+-use Requirements;
++
++
++use SilverStripe\View\Requirements;
++use SilverStripe\Forms\DropdownField;
++
+
+
+ /**
+
+modified:	src/Forms/Listbox2AutocompleteField.php
+@@ -2,8 +2,11 @@
+
+ namespace Sunnysideup\Dropdown2Autocomplete\Forms;
+
+-use ListboxField;
+-use Requirements;
++
++
++use SilverStripe\View\Requirements;
++use SilverStripe\Forms\ListboxField;
++
+
+
+ /**
+
+modified:	src/Forms/Dropdown2AutocompleteField.php
+@@ -2,8 +2,11 @@
+
+ namespace Sunnysideup\Dropdown2Autocomplete\Forms;
+
+-use DropdownField;
+-use Requirements;
++
++
++use SilverStripe\View\Requirements;
++use SilverStripe\Forms\DropdownField;
++
+
+
+ /**
+
+Writing changes for 5 files
+✔✔✔
