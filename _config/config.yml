@@ -1,6 +1,6 @@
 ---
 Name: dropdown2autocomplete
-Before: 'mysite/*'
+Before: 'app/*'
 After: 'framework/*','cms/*'
 ---
 
