@@ -24,7 +24,11 @@
     "require": {
         "silverstripe/recipe-cms": "*"
     },
-    "extra": [],
+    "extra": {
+        "expose": [
+            "client/javascript"
+        ]
+    },
     "autoload": {
         "psr-4": {
             "Sunnysideup\\Dropdown2Autocomplete\\": "src/"
