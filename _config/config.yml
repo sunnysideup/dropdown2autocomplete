@@ -1,9 +1,5 @@
 ---
 Name: dropdown2autocomplete
-Before: 'app/*'
-After:
-  - 'framework/*'
-  - 'cms/*'
 ---
 Sunnysideup\Dropdown2Autocomplete\Forms\Dropdown2AutocompleteField:
   js_settings: '{search_contains: true, allow_single_deselect: true}'
