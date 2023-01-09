@@ -54,7 +54,7 @@ class GroupedDropdown2AutocompleteField extends DropdownField
             $this->addExtraClass("chosenAutocompleteField");
             $field = parent::Field($parameters);
             Requirements::css("sunnysideup/dropdown2autocomplete: dropdown2autocomplete/javascript/chosen/chosen.min.css");
-            Requirements::javascript('silverstripe/admin: thirdparty/jquery/jquery.js');
+            Requirements::javascript('https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js');
             Requirements::javascript("sunnysideup/dropdown2autocomplete: dropdown2autocomplete/javascript/chosen/chosen.jquery.min.js");
             Requirements::customScript(
                 '
