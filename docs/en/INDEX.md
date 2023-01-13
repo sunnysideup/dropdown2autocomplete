@@ -1,9 +1,9 @@
 # How to use
 This module replaces a bunch of Dropdown-esque fields in Framework:
 
-DropdownField
-GroupedDropdownField
-ListBoxField
+ - DropdownField
+ - GroupedDropdownField
+ - ListBoxField
 Using the chosen jQuery extension; see: https://github.com/harvesthq/chosen
 
 ```php
