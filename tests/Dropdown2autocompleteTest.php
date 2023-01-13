@@ -2,6 +2,10 @@
 
 use SilverStripe\Dev\SapphireTest;
 
+/**
+ * @internal
+ * @coversNothing
+ */
 class Dropdown2autocompleteTest extends SapphireTest
 {
     protected $usesDatabase = false;
